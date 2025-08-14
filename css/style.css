@@ -58,3 +58,43 @@ main{
   width: 100%;
   object-fit: contain;
 }
+
+.animacion-marcas {
+  animation: animacionMarcas 5s linear infinite ;
+}
+
+
+@keyframes animacionMarcas {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media (min-width: 768px) {
+  .animacion-marcas {
+    animation: animacionMarcas 10s linear infinite; 
+  }
+  @keyframes animacionMarcas {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(15px);
+  }
+  75% {
+    transform: translateX(-15px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+}

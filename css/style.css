@@ -2,3 +2,13 @@
   width: 100%;
   height: 50vh;
 }
+
+.card-categoria-producto{
+  transition: transform 0.3s ease;
+
+}
+
+.card-categoria-producto:hover {
+  transform: scale(1.01);
+  cursor: pointer;
+}

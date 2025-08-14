@@ -1,0 +1,28 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    flex-grow: 1;
+}
+
+.search-input {
+  width: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: black; /* el texto siempre visible */
+  transition: all 0.3s ease;
+  opacity: 0; /* empieza invisible */
+}
+
+/* Cuando el form o sus hijos tienen foco, se expande */
+.search-form:focus-within .search-input {
+  width: 200px;
+  padding: 0.375rem 0.75rem;
+  border: 1px solid #ced4da;
+  background: white;
+  opacity: 1;
+}

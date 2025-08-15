@@ -26,3 +26,123 @@ main{
   background: white;
   opacity: 1;
 }
+
+/*INICIO STYLE PAG CONTACTO*/
+:root { --glow: 0 0 32px rgba(0, 255, 255, 0.35); }
+
+/* Fondo violeta del main */
+.main { background-color: blueviolet; }
+
+/* Título con glow */
+.glow-text{
+  text-shadow:
+    0 0 1px rgba(0,255,255,0.50),  /* borde muy fino, define el contorno */
+    0 0 6px rgba(242, 255, 0, 0.451);  /* halo suave */
+}
+
+
+/* Tarjetas oscuras estilo Vapor */
+.neon-card {
+  background-color: #212529;  /* gris oscuro */
+  color: #f8f9fa;
+  box-shadow: var(--glow);
+  border-radius: 1rem;
+}
+.neon-card .card-header,
+.neon-card label,
+.neon-card .form-label { color: #f8f9fa; }
+
+/* Controles del formulario oscuros */
+.neon-card .form-control,
+.neon-card .form-select,
+.neon-card textarea {
+  background-color: #343a40;
+  color: #f8f9fa;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.neon-card .form-control::placeholder,
+.neon-card textarea::placeholder { color: rgba(255,255,255,0.6); }
+
+/* Focus bonito dentro de la tarjeta */
+.neon-card .form-control:focus,
+.neon-card .form-select:focus,
+.neon-card textarea:focus {
+  background-color: #343a40;
+  color: #f8f9fa;
+  border-color: rgba(255,255,255,0.5);
+  box-shadow: 0 0 0 0.25rem rgba(0,255,255,0.25);
+}
+
+/* ===== Mostrar mensajes de error sin JS (al enfocar un campo inválido) ===== */
+.neon-card .invalid-feedback { display: none; }
+.neon-card .form-control:invalid:focus ~ .invalid-feedback,
+.neon-card .form-select:invalid:focus ~ .invalid-feedback,
+.neon-card textarea:invalid:focus ~ .invalid-feedback {
+  display: block;
+}
+
+/* Select “Provincia” con tono de placeholder */
+.neon-card select:invalid { color: rgba(255, 255, 255, 0.6); }
+.neon-card option { color: #000; }
+
+/* Evitar que agranden el textarea */
+.neon-card textarea { resize: none; }
+
+/* Mapa sin borde */
+.map-iframe { border: none; }
+.map-wrap { height: 100%; }
+.map-iframe { width: 100%; height: 100%; border: 0; }
+
+/*Movimiento de las cards*/
+/* Hover: levantar la tarjeta y aumentar el brillo */
+@media (hover: hover) and (pointer: fine) {
+  .neon-card {
+    transition: transform 260ms cubic-bezier(.2,.8,.2,1),
+                box-shadow 260ms ease;
+    will-change: transform, box-shadow;
+  }
+
+  /* mouse o foco por teclado */
+  .neon-card:hover,
+  .neon-card:focus-within {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow:
+      0 18px 45px rgba(0, 255, 255, 0.28),
+      0 0 40px rgba(122, 60, 255, 0.25);
+  }
+
+  /* al hacer click, baja un poquito para sensación de “press” */
+  .neon-card:active {
+    transform: translateY(-3px) scale(1.005);
+  }
+}
+
+/* Texto con gradiente deslizante y halo */
+.title-dynamic{
+  --c1:#0ff; --c2:#7a3cff; --c3:#00e5ff;
+  color: transparent;
+  background-image: linear-gradient(90deg,var(--c1),var(--c2),var(--c3),var(--c1));
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: hueShift 8s linear infinite, glowPulse2 2.4s ease-in-out infinite;
+}
+@keyframes hueShift{
+  0%{ background-position:0% 50%; }
+  100%{ background-position:100% 50%; }
+}
+@keyframes glowPulse2{
+  0%,100%{ text-shadow:0 0 6px rgba(0,255,255,.6),0 0 18px rgba(122,60,255,.35); }
+  50%{    text-shadow:0 0 2px rgba(0,255,255,.35),0 0 8px rgba(122,60,255,.2); }
+}
+
+
+/* Responsive header padding si usás <header> aparte */
+@media (max-width: 767.98px) {
+  header { padding-top: 3rem; padding-bottom: 3rem; }
+}
+@media (max-width: 767.98px) {
+  .map-wrap { height: auto; aspect-ratio: 16 / 9; }
+  .map-iframe { height: 100%; }
+}
+/*FINAL STYLE PAG CONTACTO*/

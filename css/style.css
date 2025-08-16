@@ -40,6 +40,12 @@ main{
 }
 
 /* Títulos */
+.abt-section-title {
+  letter-spacing: .5px;
+  text-shadow: 0 0 8px rgba(0,255,195,.15);
+  color: inherit;            /* usa el color del tema Vapor */
+}
+
 .abt-title { letter-spacing: 0.5px; text-shadow: 0 0 10px rgba(0, 255, 204, 0.2); }
 .abt-subtitle { max-width: 48ch; opacity: 0.9; }
 

@@ -26,3 +26,110 @@ main{
   background: white;
   opacity: 1;
 }
+
+/* ===========================
+   INICIO DE STYLE PAG ABOUT US
+   =========================== */
+
+.abt-body {
+  background-image:
+    radial-gradient(transparent 0, transparent 28px, rgba(255,255,255,0.04) 29px),
+    radial-gradient(transparent 0, transparent 28px, rgba(255,255,255,0.04) 29px);
+  background-size: 60px 60px;
+  background-position: 0 0, 30px 30px;
+}
+
+/* Títulos */
+.abt-title { letter-spacing: 0.5px; text-shadow: 0 0 10px rgba(0, 255, 204, 0.2); }
+.abt-subtitle { max-width: 48ch; opacity: 0.9; }
+
+/* Divisor estilo arcade */
+.abt-divider {
+  width: 160px; height: 10px; margin-top: 1.25rem;
+  background: linear-gradient(90deg,#00ffc3 0 20%,#7a00ff 20% 40%,#ff00e6 40% 60%,#7a00ff 60% 80%,#00ffc3 80% 100%);
+  clip-path: polygon(0 0,100% 0,100% 60%,0 60%);
+  filter: drop-shadow(0 0 8px rgba(122,0,255,.35));
+}
+
+/* Tarjetas */
+.abt-card {
+  border-radius: 1rem;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+  background: rgba(0, 0, 0, 0.25);
+}
+.abt-card:hover, .abt-card:focus-within {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(122, 0, 255, 0.25), inset 0 0 0 1px rgba(0, 255, 195, 0.15);
+  border-color: rgba(0, 255, 195, 0.25);
+}
+
+/* Avatar: wrapper 1:1 y versión por iniciales */
+.abt-avatar-wrapper { max-width: 140px; }
+
+.abt-avatar {
+  object-fit: cover;
+  width: 100%; height: 100%;
+  border: 3px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 4px rgba(122, 0, 255, 0.25), 0 6px 18px rgba(0, 0, 0, 0.4);
+  transition: box-shadow 180ms ease, transform 180ms ease;
+}
+.abt-card:hover .abt-avatar {
+  transform: scale(1.02);
+  box-shadow: 0 0 0 4px rgba(0, 255, 195, 0.25), 0 10px 24px rgba(0, 0, 0, 0.55);
+}
+
+/* Iniciales (avatar placeholder) */
+.abt-initials {
+  display:flex; align-items:center; justify-content:center;
+  width:100%; height:100%;
+  font-weight:700; font-size: 1.75rem; letter-spacing: 1px; color:#fff;
+  background:
+    radial-gradient(120% 120% at 0% 0%, rgba(255,255,255,.08) 0 40%, transparent 40% 100%),
+    conic-gradient(from 180deg at 50% 50%, #7a00ff, #ff00e6, #00ffc3, #7a00ff);
+  border: 3px solid rgba(255,255,255,.15);
+  box-shadow: 0 0 0 4px rgba(122,0,255,.25), 0 6px 18px rgba(0,0,0,.4);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+.abt-card:hover .abt-initials {
+  transform: scale(1.02);
+  box-shadow: 0 0 0 4px rgba(0,255,195,.25), 0 10px 24px rgba(0,0,0,.55);
+}
+
+/* Nombres: fucsia + cursiva (fuentes del sistema) en dos líneas */
+.abt-name {
+  display: grid;
+  grid-auto-rows: auto;
+  justify-items: center;
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  line-height: 1.1;
+  max-width: 100%;
+  font-family: ui-serif, Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  color: #ff00e6;
+  text-shadow: 0 0 10px rgba(255, 0, 230, 0.35);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.abt-team .abt-name .abt-first,
+.abt-team .abt-name .abt-last { display:block; width:100%; }
+.abt-name .abt-last { margin-top: 2px; letter-spacing: 0.45px; font-weight: 700; }
+
+/* CTA */
+.abt-cta {
+  border-radius: 999px;
+  padding: 0.7rem 1.2rem;
+  box-shadow: 0 8px 28px rgba(0, 255, 195, 0.15);
+}
+
+/* ===========================
+   FIN DE STYLE PAG ABOUT US
+   =========================== */

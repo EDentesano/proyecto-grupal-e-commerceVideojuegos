@@ -51,7 +51,7 @@ main{
 
 /* Divisor estilo arcade */
 .abt-divider {
-  width: 160px; height: 10px; margin-top: 1.25rem;
+  width: 180px; height: 10px; margin-top: 1.25rem;
   background: linear-gradient(90deg,#00ffc3 0 20%,#7a00ff 20% 40%,#ff00e6 40% 60%,#7a00ff 60% 80%,#00ffc3 80% 100%);
   clip-path: polygon(0 0,100% 0,100% 60%,0 60%);
   filter: drop-shadow(0 0 8px rgba(122,0,255,.35));

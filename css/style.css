@@ -404,3 +404,16 @@ main{
 }
 /* FINAL STYLE PAGINA CONTACTOS*/
 
+/* animacion para la seccion newsletter */
+.animacion-newsletter{
+  opacity: 0;
+  transform: translateY(30px);
+  animation: animacion-hacia-arriba 1.2s ease-out forwards;
+}
+
+@keyframes animacion-hacia-arriba {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -35,7 +35,7 @@
       
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link " href="/index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="/pages/login.html">Iniciar sesión</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"data-bs-toggle="modal" data-bs-target="#modalLogin">Iniciar sesión</a>
           <li class="nav-item"><a class="nav-link" href="/pages/register.html">Crear cuenta</a></li>
           <li class="nav-item"><a class="nav-link active" href="/pages/aboutUs.html">Nosotros</a></li>
           <li class="nav-item"><a class="nav-link" href="/pages/contact.html">Contacto</a></li>
@@ -133,7 +133,59 @@
         </div>
       </section>
     </main>
-
+    
+<!-- Modal de Iniciar Sesión -->
+<div
+  class="modal fade"
+  id="modalLogin"
+  tabindex="-1"
+  aria-labelledby="modalLoginLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-dark text-white">
+        <h5 class="modal-title" id="modalLoginLabel">Iniciar Sesión</h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+          aria-label="Cerrar"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="usuario" class="form-label">Usuario o Email</label>
+            <input
+              type="text"
+              class="form-control"
+              id="usuario"
+              placeholder="Ej: correo@example.com"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Contraseña</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              placeholder="********"
+              required
+            />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Salir
+        </button>
+        <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+      </div>
+    </div>
+  </div>
+</div>
 
     <footer class="bg-dark text-white pt-5 pb-4">
     <div class="container text-md-left">

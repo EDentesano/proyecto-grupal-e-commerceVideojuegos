@@ -29,6 +29,7 @@ main{
 
 
 
+
    INICIO DE STYLE PAG ABOUT US
    
 
@@ -140,6 +141,79 @@ main{
 
    FIN DE STYLE PAG ABOUT US
  
+
+/*transicion de los productos destacados*/
+.item-producto-destacado{
+  overflow: hidden;
+  animation: cambioShadow 4s infinite alternate;
+}
+.img-scale {
+    transition: transform 300ms ease-out, filter 300ms ease-out;
+}
+.img-scale:hover {
+  transform: scale(1.05); 
+}
+
+
+@keyframes cambioShadow {
+  0% {
+    box-shadow: 0 4px 20px rgba(48, 252, 208, 0.603);
+  }
+  50% {
+    box-shadow: 0 4px 20px rgba(7, 247, 7, 0.568); 
+  }
+  100% {
+    box-shadow: 0 4px 20px rgba(248, 5, 187, 0.568); 
+}
+}
+
+/*logos de las marcas mejor rankeadas*/
+.logo-marca {
+  height: 80px; 
+  width: 100%;
+  object-fit: contain;
+}
+
+.animacion-marcas {
+  animation: animacionMarcas 5s linear infinite ;
+}
+
+
+@keyframes animacionMarcas {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media (min-width: 768px) {
+  .animacion-marcas {
+    animation: animacionMarcas 10s linear infinite; 
+  }
+  @keyframes animacionMarcas {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(15px);
+  }
+  75% {
+    transform: translateX(-15px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+}
+
 
 /* INICIO STYLE PAGINA CONTACTOS*/
 

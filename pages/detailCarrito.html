@@ -1,101 +1,196 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Jimenez Corina, Dentesano Emiliano, Basilio Martinez, Nicolás Bulacio"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="author"
+      content="Jimenez Corina, Dentesano Emiliano, Basilio Martinez, Nicolás Bulacio"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>NextLevel</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-  <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a
+            class="navbar-brand d-flex align-items-center gap-2"
+            href="/index.html"
+          >
+            <p class="mb-0 text-light-emphasis fs-3">NextLevel</p>
+            <i class="bi bi-joystick fs-5 text-light-emphasis"></i>
+          </a>
 
-    
-      <a class="navbar-brand d-flex align-items-center gap-2" href="/index.html">
-        <p class="mb-0 text-light-emphasis fs-3">NextLevel</p>
-        <i class="bi bi-joystick fs-5 text-light-emphasis"></i>
-      </a>
+          <button
+            class="navbar-toggler me-5"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#OpcionesnavBar"
+            aria-controls="OpcionesnavBar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-    
-      <button class="navbar-toggler me-5" type="button" data-bs-toggle="collapse" data-bs-target="#OpcionesnavBar" 
-        aria-controls="OpcionesnavBar" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+          <div class="collapse navbar-collapse" id="OpcionesnavBar">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="/index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/login.html">Iniciar sesión</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/register.html">Crear cuenta</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/aboutUs.html">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/contact.html">Contacto</a>
+              </li>
+            </ul>
 
-       
-
-      
-      <div class="collapse navbar-collapse" id="OpcionesnavBar">
-
-      
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link active" href="/index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="/pages/login.html">Iniciar sesión</a></li>
-          <li class="nav-item"><a class="nav-link" href="/pages/register.html">Crear cuenta</a></li>
-          <li class="nav-item"><a class="nav-link" href="/pages/aboutUs.html">Nosotros</a></li>
-          <li class="nav-item"><a class="nav-link" href="/pages/contact.html">Contacto</a></li>
-        </ul>
-
-    
-        <form class="d-flex me-3" role="search">
-          <div class="input-group">
-            <input type="search" class="form-control" placeholder="Buscar..." aria-label="Search">
-            <button class="btn btn-success" type="submit">
-              <i class="bi bi-search"></i>
-            </button>
+            <form class="d-flex me-3" role="search">
+              <div class="input-group">
+                <input
+                  type="search"
+                  class="form-control"
+                  placeholder="Buscar..."
+                  aria-label="Search"
+                />
+                <button class="btn btn-success" type="submit">
+                  <i class="bi bi-search"></i>
+                </button>
+              </div>
+            </form>
           </div>
-        </form>
 
+          <a class="navbar-brand ms-3" href="/pages/detailCarrito.html">
+            <i class="bi bi-cart4 fs-4 text-info-emphasis"></i>
+          </a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container my-5">
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <h4 class="mb-0">🛒 Carrito de compras</h4>
+              <div class="d-flex align-items-center">
+                <span class="font-weight-bold me-3">Cantidad</span>
+                <span class="font-weight-bold me-5 pe-5">Precio</span>
+                <i class="fa fa-angle-down ml-1"></i>
+              </div>
+            </div>
+
+            <div
+              class="d-flex flex-row justify-content-between align-items-center bg-dark-info shadow-sm rounded p-1 mb-3"
+            >
+              <div>
+                <img
+                  class="rounded"
+                  src="../img/1058-producto-1019-producto-hogwars-6711-1260-8d87fc857c59b1801a17117309302411-640-0-c4d9243010a6b83.webp"
+                  width="70"
+                />
+              </div>
+
+              <div class="flex-fill px-3">
+                <h6 class="mb-1 font-weight-bold">Hogwarts Legacy</h6>
+                <div class="d-flex text-muted small"></div>
+              </div>
+
+              <div class="d-flex align-items-center">
+                <button class="btn btn-sm btn-outline-danger">
+                  <i class="fa fa-minus"></i>
+                </button>
+                <span class="mx-2 h6 mb-0">1</span>
+                <button class="btn btn-sm btn-outline-success">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </div>
+
+              <div class="px-3">
+                <h6 class="mb-0">$20.00</h6>
+              </div>
+
+              <div>
+                <button class="btn btn-sm btn-outline-danger">
+                  <i class="fa fa-trash"></i> Eliminar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-  
-        <a class="navbar-brand ms-3" href="/pages/detailCarrito.html">
-          <i class="bi bi-cart4 fs-4 text-info-emphasis"></i>
-        </a>
-    </div>
-  </nav>
-</header>
-<main>
+    </main>
 
-</main>
+    <footer class="bg-dark text-white pt-5 pb-4">
+      <div class="container text-md-left">
+        <div class="row text-md-left text-center">
+          <!-- Logo -->
+          <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
+            <h5 class="text-uppercase fw-bold">Logo</h5>
+            <p>Tu tienda de confianza para tus juegos al mejor precio!!</p>
+          </div>
 
-<footer class="bg-dark text-white pt-5 pb-4">
-    <div class="container text-md-left">
-    <div class="row text-md-left text-center">
+          <!--Social networks -->
+          <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
+            <h5 class="text-uppercase fw-bold mb-4">Redes</h5>
+            <a href="https://www.facebook.com/" class="text-white me-3"
+              ><i class="bi bi-facebook fs-4"></i
+            ></a>
+            <a href="https://x.com/" class="text-white me-3"
+              ><i class="bi bi-twitter fs-4"></i
+            ></a>
+            <a href="https://www.instagram.com/" class="text-white me-3"
+              ><i class="bi bi-instagram fs-4"></i
+            ></a>
+          </div>
 
-        <!-- Logo -->
-        <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
-        <h5 class="text-uppercase fw-bold">Logo</h5>
-        <p>Tu tienda de confianza para tus juegos al mejor precio!!</p>
+          <!-- category -->
+          <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
+            <h5 class="text-uppercase fw-bold mb-4">Categorías</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-white text-decoration-none">Inicio</a>
+              </li>
+              <li>
+                <a href="#" class="text-white text-decoration-none"
+                  >Categorías</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white text-decoration-none"
+                  >Mi Carrito</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white text-decoration-none">Producto</a>
+              </li>
+              <li>
+                <a href="#" class="text-white text-decoration-none">Nosotros</a>
+              </li>
+              <li>
+                <a href="#" class="text-white text-decoration-none">Contacto</a>
+              </li>
+            </ul>
+          </div>
         </div>
-
-        <!--Social networks -->
-        <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
-        <h5 class="text-uppercase fw-bold mb-4">Redes</h5>
-        <a href="https://www.facebook.com/" class="text-white me-3"><i class="bi bi-facebook fs-4"></i></a>
-        <a href="https://x.com/" class="text-white me-3"><i class="bi bi-twitter fs-4"></i></a>
-        <a href="https://www.instagram.com/" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a>
-        </div>
-
-        <!-- category -->
-        <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
-        <h5 class="text-uppercase fw-bold mb-4">Categorías</h5>
-        <ul class="list-unstyled">
-            <li><a href="#" class="text-white text-decoration-none">Inicio</a></li>
-            <li><a href="#" class="text-white text-decoration-none">Categorías</a></li>
-            <li><a href="#" class="text-white text-decoration-none">Mi Carrito</a></li>
-            <li><a href="#" class="text-white text-decoration-none">Producto</a></li>
-            <li><a href="#" class="text-white text-decoration-none">Nosotros</a></li>
-            <li><a href="#" class="text-white text-decoration-none">Contacto</a></li>
-        </ul>
-        </div>
-    </div>
-    </div>
-</footer>
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>

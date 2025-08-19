@@ -468,3 +468,9 @@ main{
   margin: 0 auto;         
 }
 
+/* Imágenes del carrusel del Index */
+.carousel-item img {
+  object-fit: cover;  
+  height: 700px;  
+  width: 100%;     
+}

@@ -446,17 +446,12 @@ main{
 }
 
 
-
-
-
-
 .img-categoria {
   width: 100%;
   height: 50vh;
 }
 
 .card-categoria-producto{
-  
   transition: transform 0.3s ease;
 }
 

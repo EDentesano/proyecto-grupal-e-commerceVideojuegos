@@ -418,17 +418,6 @@ main{
     transform: translateY(0);
   }
 }
-
-.card-body img {
-  max-width: 100%;        
-  max-height: 300px;      
-  width: auto;            
-  height: auto;           
-  object-fit: contain;   
-  display: block;
-  margin: 0 auto;         
-}
-
 /*estilos pagina carrito*/
 
 .contain-chart {
@@ -461,3 +450,12 @@ main{
 
 
 
+.card-body img {
+  max-width: 100%;        
+  max-height: 300px;      
+  width: auto;            
+  height: auto;           
+  object-fit: contain;   
+  display: block;
+  margin: 0 auto;         
+}

@@ -4,6 +4,7 @@ body{
     flex-direction: column;
 }
 
+
 main{
     flex-grow: 1;
 }
@@ -417,6 +418,7 @@ main{
     transform: translateY(0);
   }
 }
+
 .card-body img {
   max-width: 100%;        
   max-height: 300px;      
@@ -426,3 +428,36 @@ main{
   display: block;
   margin: 0 auto;         
 }
+
+/*estilos pagina carrito*/
+
+.contain-chart {
+      width: 70px; /* tamaño contenedor */
+      overflow: hidden; /* oculta desbordes */
+      border-radius: 1px;
+    }
+
+    .contain-chart-img {
+      width: 70px;
+      transition: transform 0.4s ease; /* animación suave */
+    }
+
+    .contain-chart-img:hover {
+      transform: scale(1.1) translateY(-5px); /* agranda y sube un poco */
+    }
+
+    .border-bottom {
+  border-bottom: 1px solid #e0e0e0 !important;
+}
+
+.cart-container {
+  background: linear-gradient(135deg, #2e1258, #0d0d38, #111129);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(84, 25, 148, 0.4);
+}
+
+
+
+
+
+

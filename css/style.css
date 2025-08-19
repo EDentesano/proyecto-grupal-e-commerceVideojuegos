@@ -475,10 +475,7 @@ main{
   width: 100%;     
 }
 
-/* =================================
-   Juegos PS5 — estilos scopeados NL
-   Prefijo: nlps5-
-   ================================= */
+/* INICIO STYLE PAGINA PS5*/
 
 /* Fondo con patrón sutil (encima del Vapor) */
 .nlps5-body {
@@ -506,8 +503,7 @@ main{
 }
 .nlps5-card .stretched-link { cursor: pointer; }
 
-/* Imagen portada 2:3 */
-.nlps5-card .ratio.ratio-2x3 { --bs-aspect-ratio: 150%; } /* 3/2 */
+/* Imagen*/
 .nlps5-img {
   width: 100%;
   height: 100%;
@@ -575,3 +571,4 @@ main{
   .nlps5-card, .nlps5-img, .nlps5-caret { transition: none; }
   .nlps5-card:hover { transform: none; }
 }
+/* F STYLE PAGINA PS5*/

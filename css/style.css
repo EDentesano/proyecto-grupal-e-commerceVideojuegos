@@ -4,7 +4,6 @@ body{
     flex-direction: column;
 }
 
-
 main{
     flex-grow: 1;
 }
@@ -97,7 +96,6 @@ main{
 }
 
 /* Estilos pagina de error Final*/
-
 
 /*INICIO DE STYLE PAG ABOUT US*/ 
 
@@ -445,11 +443,6 @@ main{
   box-shadow: 0 0 20px rgba(84, 25, 148, 0.4);
 }
 
-
-
-
-
-
 .img-categoria {
   width: 100%;
   height: 50vh;
@@ -464,7 +457,6 @@ main{
   transform: scale(1.01);
   cursor: pointer;
 }
-
 
 .card-body img {
   max-width: 100%;        

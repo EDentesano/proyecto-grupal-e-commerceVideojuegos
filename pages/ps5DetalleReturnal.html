@@ -21,73 +21,90 @@
   </head>
   <body>
     <header>
-  <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-    <div class="container-fluid custom-container d-flex justify-content-between align-items-center">
+      <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a
+            class="navbar-brand d-flex align-items-center gap-2"
+            href="/index.html"
+          >
+            <p class="mb-0 text-light-emphasis fs-3">NextLevel</p>
+            <i class="bi bi-joystick fs-5 text-light-emphasis"></i>
+          </a>
 
-      <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
-        <p class="mb-0 text-light-emphasis fs-3">NextLevel</p>
-        <i class="bi bi-joystick fs-5 text-light-emphasis"></i>
-      </a>
+          <button
+            class="navbar-toggler me-5"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#OpcionesnavBar"
+            aria-controls="OpcionesnavBar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-      <div class="collapse navbar-collapse" id="OpcionesnavBar">
-        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="../index.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalLogin">Iniciar sesión</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./register.html">Crear cuenta</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./aboutUs.html">Nosotros</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./contact.html">Contacto</a>
-          </li>
-          <li class="nav-item d-lg-none">
-            <a class="nav-link" href="pages/detailCarrito.html">
-              <i class="bi bi-cart4 fs-4 text-info-emphasis"></i>
-            </a>
-          </li>
-        </ul>
-        <form class="d-flex me-3" role="search">
-          <div class="input-group">
-            <input type="search" class="form-control" placeholder="Buscar..." aria-label="Search" />
-            <button class="btn btn-success" type="submit">
-              <i class="bi bi-search"></i>
-            </button>
+          <div class="collapse navbar-collapse" id="OpcionesnavBar">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="/index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalLogin"
+                  >Iniciar sesión</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/register.html">Crear cuenta</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/aboutUs.html">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/contact.html">Contacto</a>
+              </li>
+            </ul>
+
+            <form class="d-flex me-3" role="search">
+              <div class="input-group">
+                <input
+                  type="search"
+                  class="form-control"
+                  placeholder="Buscar..."
+                  aria-label="Search"
+                />
+                <button class="btn btn-success" type="submit">
+                  <i class="bi bi-search"></i>
+                </button>
+              </div>
+            </form>
           </div>
-        </form>
-      </div>
-      <button class="navbar-toggler ms-auto mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#OpcionesnavBar" aria-controls="OpcionesnavBar" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand ms-3 d-none d-lg-block" href="./detailCarrito.html">
-        <i class="bi bi-cart4 fs-4 text-info-emphasis"></i>
-      </a>
-    </div>
-  </nav>
-</header>
+
+          <a class="navbar-brand ms-3" href="/pages/detailCarrito.html">
+            <i class="bi bi-cart4 fs-4 text-info-emphasis"></i>
+          </a>
+        </div>
+      </nav>
+    </header>
     <main class="py-5">
       <section class="container">
         <div class="row">
           <div class="col-12 col-md-6 col-lg-6">
             <div class="card bg-dark border-0 shadow-lg p-3 rounded-4">
               <img
-                src="../img/resident-evil-2-remake-EU-PC.jpg"
                 class="img-fluid rounded-4"
-                alt="Resident Evil 2"
+                src="https://juegosdigitalesargentina.com/files/images/productos/1619742395-returnal-ps5.jpg"
+                alt="Returnal - portada"
               />
             </div>
           </div>
           <div class="col-12 col-md-6 col-lg-6">
-            <h2 class="text-white m-2 p-2 fw-bold mb-3 fs-1">
-              Resident Evil 2
-            </h2>
+            <h2 class="text-white m-2 p-2 fw-bold mb-3 fs-1">Returnal</h2>
             <div class="card bg-dark border-warning shadow-lg p-4 rounded-4">
-              <p class="fs-3 fw-bold text-warning mb-3">US$ 20.00</p>
+              <p class="fs-3 fw-bold text-warning mb-3">US$ 25.00</p>
               <p class="text-success fw-semibold mb-3">✔ En stock</p>
               <ul class="list-unstyled mb-4">
                 <li class="mb-2">
@@ -102,8 +119,7 @@
                   original y completo
                 </li>
                 <li class="mb-2">
-                  <i class="bi bi-playstation text-primary"></i> Plataforma:
-                  PC
+                  <i class="bi bi-playstation text-primary"></i> Plataforma: PS5
                 </li>
                 <li class="mb-2">
                   <i class="bi bi-cpu text-warning"></i> Consolas: 1
@@ -128,7 +144,16 @@
             <div>
               <h3 class="text-white m-2 p-2 fw-bold fs-3">Descripción</h3>
               <p class="text-white m-2 p-2">
-                Sumergite en Raccoon City y reviví el clásico survival horror de 1998, completamente reconstruido con gráficos de última generación y una jugabilidad modernizada. Controlá a Leon S. Kennedy y Claire Redfield mientras intentan escapar de la ciudad infestada de zombis y descubrir los oscuros secretos de Umbrella Corporation. Suspenso, exploración y tensión constante en una de las mejores reinvenciones del género.
+                Returnal es un shooter en tercera persona con estructura
+                roguelike de Housemarque. Encarnás a Selene, una exploradora de
+                ASTRA que se estrella en el planeta Atropos y queda atrapada en
+                un bucle temporal: cada muerte reinicia el ciclo y el mundo
+                cambia, obligándote a adaptarte en cada intento. Su tono mezcla
+                ciencia ficción con horror psicológico, y la historia gira en
+                torno a la misteriosa señal “White Shadow”. La premisa central
+                es “romper el ciclo”: explorar, aprender patrones y volver a
+                intentar hasta dominar cada encuentro.
+              </p>
             </div>
           </div>
         </div>
@@ -139,12 +164,13 @@
           <div class="col-12 col-md-6 col-lg-4">
             <div class="card border-primary mb-3 h-100">
               <div class="card-body">
-                <h5 class="card-title">José Blanco</h5>
+                <h5 class="card-title">Lucía Fernández</h5>
                 <h6 class="card-subtitle mb-2 text-body-secondary">
                   hace 1 mes
                 </h6>
                 <p class="card-text">
-                  El remake perfecto, mantiene la esencia del original pero se siente totalmente moderno.
+                  “El bucle roguelike me enganchó mal; cada derrota me hizo
+                  volver mejor.”
                 </p>
                 <div class="text-warning">★★★★★</div>
               </div>
@@ -153,12 +179,13 @@
           <div class="col-12 col-md-6 col-lg-4">
             <div class="card border-primary mb-3 h-100">
               <div class="card-body">
-                <h5 class="card-title">Julia Torres</h5>
+                <h5 class="card-title">Martín Rojas</h5>
                 <h6 class="card-subtitle mb-2 text-body-secondary">
                   hace 1 mes
                 </h6>
                 <p class="card-text">
-                  Los gráficos y la atmósfera son increíbles, aunque la munición escasea demasiado.
+                  “La vibra sci-fi con terror psicológico está tremenda; la
+                  ambientación te deja tenso todo el tiempo.”
                 </p>
                 <div class="text-warning">★★★★☆</div>
               </div>
@@ -167,12 +194,13 @@
           <div class="col-12 col-md-6 col-lg-4">
             <div class="card border-primary mb-3 h-100">
               <div class="card-body">
-                <h5 class="card-title">Borja Meyer</h5>
+                <h5 class="card-title">Sofía Álvarez</h5>
                 <h6 class="card-subtitle mb-2 text-body-secondary">
                   hace 3 semanas
                 </h6>
                 <p class="card-text">
-                 La campaña de Claire me pareció aún más intensa que la de Leon, rejugable al 100%.
+                  “Difícil pero justo: cuando morís sabés que fue error tuyo, y
+                  eso motiva.”
                 </p>
                 <div class="text-warning">★★★★☆</div>
               </div>
@@ -181,12 +209,13 @@
           <div class="col-12 col-md-6 col-lg-4">
             <div class="card border-primary mb-3 h-100">
               <div class="card-body">
-                <h5 class="card-title">Juampi Ruiz</h5>
+                <h5 class="card-title">Diego Paredes</h5>
                 <h6 class="card-subtitle mb-2 text-body-secondary">
                   hace 2 semanas
                 </h6>
                 <p class="card-text">
-                 Da miedo de verdad, cada pasillo se siente peligroso. Mr. X es una pesadilla.
+                  “El ‘bullet-hell’ se siente único en tercera persona; esquivar
+                  y disparar es puro flow.”
                 </p>
                 <div class="text-warning">★★★☆☆</div>
               </div>
@@ -195,12 +224,13 @@
           <div class="col-12 col-md-6 col-lg-4">
             <div class="card border-primary mb-3 h-100">
               <div class="card-body">
-                <h5 class="card-title">Franscisco vasso</h5>
+                <h5 class="card-title">Valentina Campos</h5>
                 <h6 class="card-subtitle mb-2 text-body-secondary">
                   hace 4 dias
                 </h6>
                 <p class="card-text">
-                 Muy bueno, pero me hubiera gustado un poco más de contenido extra.
+                  “La historia es críptica y fragmentada, pero cuando encaja,
+                  pega fuerte.”
                 </p>
                 <div class="text-warning">★★★★☆</div>
               </div>
@@ -209,6 +239,7 @@
         </div>
       </section>
     </main>
+
     <!-- Modal de Iniciar Sesión -->
     <div
       class="modal fade"
@@ -265,15 +296,13 @@
         </div>
       </div>
     </div>
-    <footer class="bg-dark text-white pt-5 pb-4" data-bs-theme="dark">
+    <footer class="bg-dark text-white pt-5 pb-4">
       <div class="container text-md-left">
         <div class="row text-md-left text-center">
           <!-- Logo -->
           <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
-            <a class="gap-2 text-white" href="../index.html">
-        <p class="mb-0 d-inline-block me-2 fs-3 text-light-emphasis" >NextLevel</p>
-        <i class="bi bi-joystick fs-5 text-light-emphasis "></i>
-      </a>
+            <h5 class="text-uppercase fw-bold">Logo</h5>
+            <p>Tu tienda de confianza para tus juegos al mejor precio!!</p>
           </div>
 
           <!--Social networks -->
@@ -283,7 +312,7 @@
               ><i class="bi bi-facebook fs-4"></i
             ></a>
             <a href="https://x.com/" class="text-white me-3"
-              ><i class="bi bi-twitter-x fs-4"></i
+              ><i class="bi bi-twitter fs-4"></i
             ></a>
             <a href="https://www.instagram.com/" class="text-white me-3"
               ><i class="bi bi-instagram fs-4"></i
@@ -298,17 +327,23 @@
                 <a href="#" class="text-white text-decoration-none">Inicio</a>
               </li>
               <li>
-                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalLogin">
-                  Iniciar Sesion</a>
+                <a href="#" class="text-white text-decoration-none"
+                  >Categorías</a
+                >
               </li>
               <li>
-                <a class="nav-link" href="./register.html">Crear cuenta</a>
+                <a href="#" class="text-white text-decoration-none"
+                  >Mi Carrito</a
+                >
               </li>
               <li>
-                <a class="nav-link" href="./aboutUs.html">Sobre Nosotros</a>
+                <a href="#" class="text-white text-decoration-none">Producto</a>
               </li>
               <li>
-                <a class="nav-link" href="./contact.html">Contacto</a>
+                <a href="#" class="text-white text-decoration-none">Nosotros</a>
+              </li>
+              <li>
+                <a href="#" class="text-white text-decoration-none">Contacto</a>
               </li>
             </ul>
           </div>

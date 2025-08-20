@@ -280,6 +280,21 @@ main{
 }
 }
 
+.logo-playstation{
+  font-size: 80px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.logo-ea{
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 /* INICIO STYLE PAGINA CONTACTOS*/
 

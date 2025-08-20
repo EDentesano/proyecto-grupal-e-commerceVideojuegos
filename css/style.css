@@ -658,3 +658,14 @@ main{
 }
 /* FINAL STYLE PAGINA PS5*/
 
+/* Estilos para el botón flotante de whatsapp */
+.whatsapp {
+  position: fixed;
+  top: 90%;
+  right: 20px;
+  font-size: 2.5rem;
+  animation: flotar 4s ease-in-out infinite;
+  z-index: 1;
+}
+
+

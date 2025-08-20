@@ -476,7 +476,6 @@ main{
 }
 
 /* INICIO STYLE PAGINA PS5*/
-
 /* Fondo con patrón sutil (encima del Vapor) */
 .nlps5-body {
   background-image:
@@ -572,4 +571,4 @@ main{
   .nlps5-card, .nlps5-img, .nlps5-caret { transition: none; }
   .nlps5-card:hover { transform: none; }
 }
-/* F STYLE PAGINA PS5*/
+/* FINAL STYLE PAGINA PS5*/

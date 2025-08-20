@@ -443,6 +443,7 @@ main{
   box-shadow: 0 0 20px rgba(84, 25, 148, 0.4);
 }
 
+
 .img-categoria {
   width: 100%;
   height: 50vh;
@@ -468,12 +469,17 @@ main{
 }
 
 
+
+
+
+
 /* Imágenes del carrusel del Index */
 .carousel-item img {
   object-fit: cover;  
   height: 700px;  
   width: 100%;     
 }
+
 
 /* INICIO STYLE PAGINA PS5*/
 /* Fondo con patrón sutil (encima del Vapor) */
@@ -571,4 +577,3 @@ main{
   .nlps5-card, .nlps5-img, .nlps5-caret { transition: none; }
   .nlps5-card:hover { transform: none; }
 }
-/* FINAL STYLE PAGINA PS5*/

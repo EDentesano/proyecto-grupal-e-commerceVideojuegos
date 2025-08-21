@@ -21,66 +21,85 @@
   </head>
   <body>
     <header>
-  <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-    <div class="container-fluid custom-container d-flex justify-content-between align-items-center">
+      <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div
+          class="container-fluid custom-container d-flex justify-content-between align-items-center"
+        >
+          <a
+            class="navbar-brand d-flex align-items-center gap-2"
+            href="../index.html"
+          >
+            <p class="mb-0 text-light-emphasis fs-3">NextLevel</p>
+            <i class="bi bi-joystick fs-5 text-light-emphasis"></i>
+          </a>
 
-      <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
-        <p class="mb-0 text-light-emphasis fs-3">NextLevel</p>
-        <i class="bi bi-joystick fs-5 text-light-emphasis"></i>
-      </a>
-
-      <div class="collapse navbar-collapse" id="OpcionesnavBar">
-        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="../index.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalLogin">Iniciar sesión</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./register.html">Crear cuenta</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./aboutUs.html">Sobre Nosotros</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./contact.html">Contacto</a>
-          </li>
-          <li class="nav-item d-lg-none">
-            <a class="nav-link" href="pages/detailCarrito.html">
-              <i class="bi bi-cart4 fs-4 text-info-emphasis"></i>
-            </a>
-          </li>
-        </ul>
-        <form class="d-flex me-3" role="search">
-          <div class="input-group">
-            <input type="search" class="form-control" placeholder="Buscar..." aria-label="Search" />
-            <button class="btn btn-success" type="submit">
-              <i class="bi bi-search"></i>
-            </button>
+          <div class="collapse navbar-collapse" id="OpcionesnavBar">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalLogin"
+                  >Iniciar sesión</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./register.html">Crear cuenta</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./aboutUs.html">Sobre Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contact.html">Contacto</a>
+              </li>
+              <li class="nav-item d-lg-none">
+                <a class="nav-link" href="pages/detailCarrito.html">
+                  <i class="bi bi-cart4 fs-4 text-info-emphasis"></i>
+                </a>
+              </li>
+            </ul>
+            <form class="d-flex me-3" role="search">
+              <div class="input-group">
+                <input
+                  type="search"
+                  class="form-control"
+                  placeholder="Buscar..."
+                  aria-label="Search"
+                />
+                <button class="btn btn-success" type="submit">
+                  <i class="bi bi-search"></i>
+                </button>
+              </div>
+            </form>
           </div>
-        </form>
-      </div>
-      <button class="navbar-toggler ms-auto mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#OpcionesnavBar" aria-controls="OpcionesnavBar" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand ms-3 d-none d-lg-block" href="./detailCarrito.html">
-        <i class="bi bi-cart4 fs-4 text-info-emphasis"></i>
-      </a>
-    </div>
-  </nav>
-</header>
-    <main>
+          <button
+            class="navbar-toggler ms-auto mt-2"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#OpcionesnavBar"
+            aria-controls="OpcionesnavBar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a
+            class="navbar-brand ms-3 d-none d-lg-block"
+            href="./detailCarrito.html"
+          >
+            <i class="bi bi-cart4 fs-4 text-info-emphasis"></i>
+          </a>
+        </div>
+      </nav>
+    </header>
+    <main class="py-5">
       <section class="container">
         <div class="row">
-          <div class="col-12 col-md-12 col-lg-12">
-            <h2 class="text-white my-3 p-2 fw-bold  fs-1">
-              Mortal Kombat II PS4
-            </h2>
-          </div>
-          <div
-            class="col-12 col-md-6 col-lg-6 "
-          >
+          <div class="col-12 col-md-6 col-lg-6">
             <div class="card bg-dark border-0 shadow-lg p-3 rounded-4">
               <img
                 src="../img/mortal-kombat-11-ps4.png"
@@ -89,9 +108,11 @@
               />
             </div>
           </div>
-     
+
           <div class="col-12 col-md-6 col-lg-6">
-            
+            <h2 class="text-white m-2 p-2 fw-bold fs-1">
+              Mortal Kombat II PS4
+            </h2>
             <div class="card bg-dark border-warning shadow-lg p-4 rounded-4">
               <p class="fs-3 fw-bold text-warning mb-3">US$ 13,50</p>
               <p class="text-success fw-semibold mb-3">✔ En stock</p>
@@ -131,18 +152,18 @@
             <div class="bg-info text-white my-4 p-3">
               Entrega en minutos, una vez comprado.
             </div>
-          </div>
-          <div class="col-12 col-md-12 col-lg-12">
-            <h3 class="text-white m-2 p-2 fw-bold fs-3">Description</h3>
-            <p class="text-white m-2 p-2">
-              Mortal Kombat está de vuelta y mejor que nunca en la próxima
-              evolución de la icónica franquicia. Las nuevas variaciones de
-              personajes personalizados te dan un control sin precedentes para
-              personalizar a los luchadores y hacerlos tuyos. El nuevo motor
-              gráfico que muestra todos los momentos que te destrozan las
-              calaveras y que te dejan sin aliento te acerca tanto a la lucha
-              que puedes sentirlo.
-            </p>
+            <div>
+              <h3 class="text-white m-2 p-2 fw-bold fs-3">Description</h3>
+              <p class="text-white m-2 p-2">
+                Mortal Kombat está de vuelta y mejor que nunca en la próxima
+                evolución de la icónica franquicia. Las nuevas variaciones de
+                personajes personalizados te dan un control sin precedentes para
+                personalizar a los luchadores y hacerlos tuyos. El nuevo motor
+                gráfico que muestra todos los momentos que te destrozan las
+                calaveras y que te dejan sin aliento te acerca tanto a la lucha
+                que puedes sentirlo.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -210,7 +231,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-12 col-lg-8">
+          <div class="col-12 col-md-6 col-lg-4">
             <div class="card border-primary mb-3 h-100">
               <div class="card-body">
                 <h5 class="card-title">Héctor Díaz</h5>
@@ -290,9 +311,11 @@
           <!-- Logo -->
           <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
             <a class="gap-2 text-white" href="../index.html">
-        <p class="mb-0 d-inline-block me-2 fs-3 text-light-emphasis" >NextLevel</p>
-        <i class="bi bi-joystick fs-5 text-light-emphasis "></i>
-      </a>
+              <p class="mb-0 d-inline-block me-2 fs-3 text-light-emphasis">
+                NextLevel
+              </p>
+              <i class="bi bi-joystick fs-5 text-light-emphasis"></i>
+            </a>
           </div>
 
           <!--Social networks -->
@@ -317,8 +340,14 @@
                 <a href="#" class="text-white text-decoration-none">Inicio</a>
               </li>
               <li>
-                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalLogin">
-                  Iniciar Sesion</a>
+                <a
+                  class="nav-link"
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalLogin"
+                >
+                  Iniciar Sesion</a
+                >
               </li>
               <li>
                 <a class="nav-link" href="./register.html">Crear cuenta</a>

@@ -651,3 +651,13 @@ main{
   z-index: 1;
 }
 
+/* animacion del logo :) en navbar*/
+.animacion-logo{
+ display: inline-block;
+  transition: transform 0.6s ease; 
+  transform-style: preserve-3d;
+}
+
+.animacion-logo:hover {
+  transform: rotateY(180deg);
+}

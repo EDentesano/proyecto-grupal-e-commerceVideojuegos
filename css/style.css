@@ -1,0 +1,663 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    flex-grow: 1;
+}
+
+.search-input {
+  width: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: black; /* el texto siempre visible */
+  transition: all 0.3s ease;
+  opacity: 0; /* empieza invisible */
+}
+
+/* Cuando el form o sus hijos tienen foco, se expande */
+.search-form:focus-within .search-input {
+  width: 200px;
+  padding: 0.375rem 0.75rem;
+  border: 1px solid #ced4da;
+  background: white;
+  opacity: 1;
+}
+
+/* Estilos pagina de error Inicio*/
+.page-error {
+  background-color: #1e1e2f;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.error-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.error-code {
+  font-size: 10rem;
+  font-weight: bold;
+  color: #ff6f61;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.error-message {
+  font-size: 1.8rem;
+  margin-top: 20px;
+}
+
+.error-button {
+  margin-top: 30px;
+  padding: 12px 24px;
+  background-color: #ff6f61;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.error-button:hover {
+  background-color: #e8594f;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+}
+
+@media (max-width: 600px) {
+  .error-code {
+    font-size: 6rem;
+  }
+
+  .error-message {
+    font-size: 1.2rem;
+  }
+}
+
+/* Estilos pagina de error Final*/
+
+/*INICIO DE STYLE PAG ABOUT US*/ 
+.abt-body {
+  background-image:
+    radial-gradient(transparent 0, transparent 28px, rgba(255,255,255,0.04) 29px),
+    radial-gradient(transparent 0, transparent 28px, rgba(255,255,255,0.04) 29px);
+  background-size: 60px 60px;
+  background-position: 0 0, 30px 30px;
+}
+
+/* Títulos */
+.abt-section-title {
+  letter-spacing: .5px;
+  text-shadow: 0 0 8px rgba(0,255,195,.15);
+  color: inherit;            /* usa el color del tema Vapor */
+}
+
+.abt-title { letter-spacing: 0.5px; text-shadow: 0 0 10px rgba(0, 255, 204, 0.2); }
+.abt-subtitle { max-width: 48ch; opacity: 0.9; }
+
+/* Divisor estilo arcade */
+.abt-divider {
+  width: 180px; height: 10px; margin-top: 1.25rem;
+  background: linear-gradient(90deg,#00ffc3 0 20%,#7a00ff 20% 40%,#ff00e6 40% 60%,#7a00ff 60% 80%,#00ffc3 80% 100%);
+  clip-path: polygon(0 0,100% 0,100% 60%,0 60%);
+  filter: drop-shadow(0 0 8px rgba(122,0,255,.35));
+}
+
+/* Tarjetas */
+.abt-card {
+  border-radius: 1rem;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+  background: rgba(0, 0, 0, 0.25);
+}
+.abt-card:hover, .abt-card:focus-within {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(122, 0, 255, 0.25), inset 0 0 0 1px rgba(0, 255, 195, 0.15);
+  border-color: rgba(0, 255, 195, 0.25);
+}
+
+/* Avatar: wrapper 1:1 y versión por iniciales */
+.abt-avatar-wrapper { max-width: 140px; }
+
+.abt-avatar {
+  object-fit: cover;
+  width: 100%; height: 100%;
+  border: 3px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 4px rgba(122, 0, 255, 0.25), 0 6px 18px rgba(0, 0, 0, 0.4);
+  transition: box-shadow 180ms ease, transform 180ms ease;
+}
+.abt-card:hover .abt-avatar {
+  transform: scale(1.02);
+  box-shadow: 0 0 0 4px rgba(0, 255, 195, 0.25), 0 10px 24px rgba(0, 0, 0, 0.55);
+}
+
+/*Imagenes fotos*/
+.fotosPerfil{
+  height:300px;
+  width: 90%;
+}
+
+/* Nombres: fucsia + cursiva (fuentes del sistema) en dos líneas */
+.abt-name {
+  display: grid;
+  grid-auto-rows: auto;
+  justify-items: center;
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  line-height: 1.1;
+  max-width: 100%;
+  font-family: ui-serif, Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  color: #ff00e6;
+  text-shadow: 0 0 10px rgba(255, 0, 230, 0.35);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.abt-team .abt-name .abt-first,
+.abt-team .abt-name .abt-last { display:block; width:100%; }
+.abt-name .abt-last { margin-top: 2px; letter-spacing: 0.45px; font-weight: 700; }
+
+/* CTA */
+.abt-cta {
+  border-radius: 999px;
+  padding: 0.7rem 1.2rem;
+  box-shadow: 0 8px 28px rgba(0, 255, 195, 0.15);
+}
+
+   /*FIN DE STYLE PAG ABOUT US */
+
+
+/*transicion de los productos destacados*/
+.item-producto-destacado{
+  overflow: hidden;
+  animation: cambioShadow 4s infinite alternate;
+}
+.img-scale {
+    transition: transform 300ms ease-out, filter 300ms ease-out;
+}
+.img-scale:hover {
+  transform: scale(1.05); 
+}
+
+
+@keyframes cambioShadow {
+  0% {
+    box-shadow: 0 4px 20px rgba(48, 252, 208, 0.603);
+  }
+  50% {
+    box-shadow: 0 4px 20px rgba(7, 247, 7, 0.568); 
+  }
+  100% {
+    box-shadow: 0 4px 20px rgba(248, 5, 187, 0.568); 
+}
+}
+
+/*logos de las marcas mejor rankeadas*/
+.logo-marca {
+  height: 80px; 
+  width: 100%;
+  object-fit: contain;
+}
+
+.animacion-marcas {
+  animation: animacionMarcas 5s linear infinite ;
+}
+
+
+@keyframes animacionMarcas {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media (min-width: 768px) {
+  .animacion-marcas {
+    animation: animacionMarcas 10s linear infinite; 
+  }
+  @keyframes animacionMarcas {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(15px);
+  }
+  75% {
+    transform: translateX(-15px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+}
+
+.logo-playstation{
+  font-size: 80px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.logo-ea{
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* INICIO STYLE PAGINA CONTACTOS*/
+
+.page-contacto {
+  --contact-glow: 0 0 32px rgba(0, 255, 255, 0.35);
+  background-color: blueviolet;
+}
+
+/* Título con halo */
+.page-contacto .glow-text {
+  text-shadow:
+    0 0 1px rgba(0, 255, 255, 0.50),
+    0 0 6px rgba(242, 255, 0, 0.45);
+}
+
+/* Tarjetas oscuras estilo vapor */
+.page-contacto .neon-card {
+  background-color: #212529;
+  color: #f8f9fa;
+  box-shadow: var(--contact-glow);
+  border-radius: 1rem;
+}
+.page-contacto .neon-card .card-header,
+.page-contacto .neon-card label,
+.page-contacto .neon-card .form-label {
+  color: #f8f9fa;
+}
+
+/* Controles del formulario */
+.page-contacto .neon-card .form-control,
+.page-contacto .neon-card .form-select,
+.page-contacto .neon-card textarea {
+  background-color: #343a40;
+  color: #f8f9fa;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.page-contacto .neon-card .form-control::placeholder,
+.page-contacto .neon-card textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Focus dentro de la tarjeta */
+.page-contacto .neon-card .form-control:focus,
+.page-contacto .neon-card .form-select:focus,
+.page-contacto .neon-card textarea:focus {
+  background-color: #343a40;
+  color: #f8f9fa;
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 0 0.25rem rgba(0, 255, 255, 0.25);
+}
+
+/* Mostrar mensajes de error sin JS (al enfocar un campo inválido) */
+.page-contacto .neon-card .invalid-feedback { display: none; }
+.page-contacto .neon-card .form-control:invalid:focus ~ .invalid-feedback,
+.page-contacto .neon-card .form-select:invalid:focus ~ .invalid-feedback,
+.page-contacto .neon-card textarea:invalid:focus ~ .invalid-feedback {
+  display: block;
+}
+
+/* Select “Provincia” */
+.page-contacto .neon-card select:invalid { color: rgba(255, 255, 255, 0.6); }
+.page-contacto .neon-card option { color: #000; }
+
+/* Textarea */
+.page-contacto .neon-card textarea { resize: none; }
+
+/* Mapa */
+.page-contacto .map-wrap { height: 100%; }
+.page-contacto .map-iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Hover/press en tarjetas (solo dispositivos con puntero fino) */
+@media (hover: hover) and (pointer: fine) {
+  .page-contacto .neon-card {
+    transition:
+      transform 260ms cubic-bezier(.2, .8, .2, 1),
+      box-shadow 260ms ease;
+    will-change: transform, box-shadow;
+  }
+  .page-contacto .neon-card:hover,
+  .page-contacto .neon-card:focus-within {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow:
+      0 18px 45px rgba(0, 255, 255, 0.28),
+      0 0 40px rgba(122, 60, 255, 0.25);
+  }
+  .page-contacto .neon-card:active {
+    transform: translateY(-3px) scale(1.005);
+  }
+}
+
+/* Texto con gradiente y halo animado */
+.page-contacto .title-dynamic {
+  --c1: #0ff; --c2: #7a3cff; --c3: #00e5ff;
+  color: transparent;
+  background-image: linear-gradient(90deg, var(--c1), var(--c2), var(--c3), var(--c1));
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: contactoHueShift 8s linear infinite, contactoGlowPulse 2.4s ease-in-out infinite;
+}
+@keyframes contactoHueShift {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+@keyframes contactoGlowPulse {
+  0%, 100% { text-shadow: 0 0 6px rgba(0, 255, 255, .6), 0 0 18px rgba(122, 60, 255, .35); }
+  50%      { text-shadow: 0 0 2px rgba(0, 255, 255, .35), 0 0 8px rgba(122, 60, 255, .2); }
+}
+
+/* Responsive solo para Contacto */
+@media (max-width: 767.98px) {
+  /* Solo afecta headers dentro de Contacto si existe uno dentro de .page-contacto */
+  .page-contacto header { padding-top: 3rem; padding-bottom: 3rem; }
+
+  .page-contacto .map-wrap { height: auto; aspect-ratio: 16 / 9; }
+  .page-contacto .map-iframe { height: 100%; }
+}
+/* FINAL STYLE PAGINA CONTACTOS*/
+
+/* animacion para la seccion newsletter */
+.animacion-newsletter{
+  opacity: 0;
+  transform: translateY(30px);
+  animation: animacion-hacia-arriba 1.2s ease-out forwards;
+}
+
+@keyframes animacion-hacia-arriba {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/*estilos pagina carrito*/
+
+.contain-chart {
+      width: 70px; /* tamaño contenedor */
+      overflow: hidden; /* oculta desbordes */
+      border-radius: 1px;
+    }
+
+    .contain-chart-img {
+      width: 70px;
+      transition: transform 0.4s ease; /* animación suave */
+    }
+
+    .contain-chart-img:hover {
+      transform: scale(1.1) translateY(-5px); /* agranda y sube un poco */
+    }
+
+    .border-bottom {
+  border-bottom: 1px solid #e0e0e0 !important;
+}
+
+.cart-container {
+  background: linear-gradient(135deg, #2e1258, #0d0d38, #111129);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(84, 25, 148, 0.4);
+}
+
+
+.img-categoria {
+  width: 100%;
+  height: 50vh;
+}
+
+.card-categoria-producto{
+  transition: transform 0.3s ease;
+}
+
+.card-categoria-producto:hover {
+  transform: scale(1.01);
+  cursor: pointer;
+}
+
+.card-body img {
+  max-width: 100%;        
+  max-height: 300px;      
+  width: auto;            
+  height: auto;           
+  object-fit: contain;   
+  display: block;
+  margin: 0 auto;         
+}
+
+
+/* Imágenes del carrusel del Index */
+.carousel-item img {
+  object-fit: cover;  
+  height: 700px;  
+  width: 100%;     
+}
+
+* INICIO STYLE PAGINA PS5*/
+/* Fondo con patrón sutil (encima del Vapor) */
+.nlps5-body {
+  background-image:
+    radial-gradient(transparent 0, transparent 28px, rgba(255,255,255,.04) 29px),
+    radial-gradient(transparent 0, transparent 28px, rgba(255,255,255,.04) 29px);
+  background-size: 60px 60px;
+  background-position: 0 0, 30px 30px;
+}
+
+/* Card + hover */
+.nlps5-card {
+  border-radius: 1rem;
+  border: 1px solid rgba(255,255,255,.08);
+  background: rgba(0,0,0,.25);
+  backdrop-filter: blur(4px);
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+  overflow: hidden;
+  position: relative;
+}
+.nlps5-card:hover, .nlps5-card:focus-within {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(122,0,255,.25), inset 0 0 0 1px rgba(0,255,195,.15);
+  border-color: rgba(0,255,195,.25);
+}
+.nlps5-card .stretched-link { cursor: pointer; }
+
+/* Imagen*/
+
+.nlps5-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  filter: saturate(1.05) contrast(1.05);
+  transition: transform 300ms ease, filter 300ms ease;
+}
+.nlps5-card:hover .nlps5-img {
+  transform: scale(1.04);
+  filter: saturate(1.1) contrast(1.1);
+}
+
+/* Precios */
+.nlps5-price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: .5rem;
+}
+.nlps5-price-off {
+  text-decoration: line-through;
+  opacity: .65;
+}
+.nlps5-price-now {
+  font-weight: 700;
+  color: #00ffc3;
+  text-shadow: 0 0 8px rgba(0,255,195,.25);
+}
+
+/* Modal */
+.nlps5-modal {
+  border-radius: 1rem;
+  background: rgba(0,0,0,.65);
+  border: 1px solid rgba(255,255,255,.12);
+  backdrop-filter: blur(8px);
+}
+
+/* Details / Summary (sin JS) */
+.nlps5-details {
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(0,0,0,.35);
+  border-radius: .75rem;
+  padding: .5rem .75rem;
+}
+.nlps5-summary {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 600;
+  letter-spacing: .2px;
+  color: #00ffc3;
+}
+.nlps5-summary::-webkit-details-marker { display: none; }
+.nlps5-caret { margin-left: auto; transition: transform 200ms ease; }
+.nlps5-details-body { margin-top: .35rem; }
+.nlps5-summary-close { display: none; }
+.nlps5-details[open] .nlps5-summary-open { display: none; }
+.nlps5-details[open] .nlps5-summary-close { display: inline; }
+.nlps5-details[open] .nlps5-caret { transform: rotate(180deg); }
+
+/* ===== PS5 · Banner Returnal – clases scopeadas nlps5-destacado-returnal ===== */
+.nlps5-destacado-returnal{
+  background:#000;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:1rem;
+}
+.nlps5-destacado-returnal__media{ border-radius:1rem; overflow:hidden; }
+
+.nlps5-destacado-returnal__img{
+  width:100%; height: 450px; object-fit:cover;
+  filter:saturate(1.05) contrast(1.05) brightness(.95);
+  transform:scale(1.02);
+  transition:transform 9000ms cubic-bezier(.2,.8,.2,1), filter 300ms ease;
+}
+.nlps5-destacado-returnal:hover .nlps5-destacado-returnal__img{
+  transform:scale(1.08);
+  filter:saturate(1.1) contrast(1.1) brightness(1);
+}
+
+/* Capa para contraste del texto */
+.nlps5-destacado-returnal__overlay{
+  position:absolute; inset:0; pointer-events:none;
+  background:
+    radial-gradient(80% 120% at 0% 100%, rgba(0,0,0,.7) 0%, rgba(0,0,0,.2) 40%, transparent 70%),
+    linear-gradient(180deg, transparent 55%, rgba(0,0,0,.65) 100%);
+}
+
+/* Contenido inferior */
+.nlps5-destacado-returnal__content{
+  position:absolute; inset:auto 0 0 0; z-index:2;
+  padding:1rem 1.25rem 1.25rem;
+}
+@media (min-width:768px){
+  .nlps5-destacado-returnal__content{ padding:1.25rem 1.5rem 1.5rem; }
+}
+.nlps5-destacado-returnal__title{ text-shadow:0 0 10px rgba(0,255,195,.22); margin:0 0 .5rem 0; }
+.nlps5-destacado-returnal__text{ max-width:60ch; opacity:.95; }
+.nlps5-destacado-returnal:hover{ box-shadow:0 14px 42px rgba(0,255,195,.15), 0 0 40px rgba(122,0,255,.18); }
+
+/* Cartel superior-izquierdo (no es enlace, no navega) */
+.nlps5-destacado-returnal__ribbon{
+  position:absolute; top:.75rem; left:.75rem; z-index:3;
+  padding:0; line-height:1; pointer-events:auto; cursor:default; user-select:none;
+}
+.nlps5-destacado-returnal__ribbon > span{
+  display:inline-block;
+  padding:.45rem .8rem .4rem;
+  font-weight:700; letter-spacing:.3px; text-transform:uppercase;
+  font-size:.82rem; color:#fff;
+  background:linear-gradient(135deg,#ff00e6,#7a00ff);
+  border-radius:.6rem;
+  box-shadow:0 6px 18px rgba(122,0,255,.35), 0 0 12px rgba(255,0,230,.35);
+  animation:nlps5dr-ribbon-float 3s ease-in-out infinite;
+}
+@keyframes nlps5dr-ribbon-float{
+  0%,100%{ transform:translateY(0); }
+  50%   { transform:translateY(-2px); }
+}
+
+/* Accesibilidad reduce motion  */
+@media (prefers-reduced-motion: reduce) {
+  .nlps5-card, .nlps5-img, .nlps5-caret { transition: none; }
+  .nlps5-card:hover { transform: none; }
+}
+
+/* Accesibilidad Banner juego destacado reduce motion */
+@media (prefers-reduced-motion: reduce){
+  .nlps5-destacado-returnal__img,
+  .nlps5-destacado-returnal__ribbon > span{ animation:none; transition:none; transform:none; }
+}
+/* FINAL STYLE PAGINA PS5*/
+
+/* Estilos para el botón flotante de whatsapp */
+.whatsapp {
+  position: fixed;
+  top: 90%;
+  right: 20px;
+  font-size: 2.5rem;
+  animation: flotar 4s ease-in-out infinite;
+  z-index: 1;
+}
+
+/* animacion del logo :) en navbar*/
+.animacion-logo{
+ display: inline-block;
+  transition: transform 0.6s ease; 
+  transform-style: preserve-3d;
+}
+
+.animacion-logo:hover {
+  transform: rotateY(180deg);
+}

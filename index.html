@@ -1,11 +1,615 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="author"
+      content="Jimenez Corina, Dentesano Emiliano, Basilio Martinez, Nicolás Bulacio"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootswatch/dist/vapor/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>NextLevel</title>
+  </head>
+  <body>
+
+    <header>
+  <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+    <div class="container-fluid custom-container d-flex justify-content-between align-items-center">
+
+      <a class="navbar-brand d-flex align-items-center gap-2 animacion-logo" href="../index.html">
+        <p class="mb-0 text-light-emphasis fs-3">NextLevel</p>
+        <i class="bi bi-joystick fs-5 text-light-emphasis"></i>
+      </a>
+
+      <div class="collapse navbar-collapse" id="OpcionesnavBar">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalLogin">Iniciar sesión</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/register.html">Crear cuenta</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/aboutUs.html">Sobre Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/contact.html">Contacto</a>
+          </li>
+          <li class="nav-item d-lg-none">
+            <a class="nav-link" href="pages/detailCarrito.html">
+              <i class="bi bi-cart4 fs-4 text-info-emphasis"></i>
+            </a>
+          </li>
+        </ul>
+        <form class="d-flex me-3" role="search">
+          <div class="input-group">
+            <input type="search" class="form-control" placeholder="Buscar..." aria-label="Search" />
+            <button class="btn btn-success" type="submit">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+      <button class="navbar-toggler ms-auto mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#OpcionesnavBar" aria-controls="OpcionesnavBar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand ms-3 d-none d-lg-block" href="pages/detailCarrito.html">
+        <i class="bi bi-cart4 fs-4 text-info-emphasis"></i>
+      </a>
+    </div>
+  </nav>
+</header>
+
+    <main>
+      <!-- carrusel con promos -->
+      <div id="miCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#miCarousel"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#miCarousel"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#miCarousel"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="https://blog.playstation.com/uploads/sites/14/2016/09/games-under-20-twitter-01-ps4-es-es-07sept16-1.jpg"
+              class="d-block w-100 img-fluid"
+              alt="Slide 1"
+            />
+            <div class="carousel-caption d-none d-md-block"></div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://media.tycsports.com/files/2021/12/13/371454/ofertas-juegos-playstation_862x485_wmk.jpg"
+              class="d-block w-100 img-fluid"
+              alt="Slide 2"
+            />
+            <div class="carousel-caption d-none d-md-block"></div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://e00-marca.uecdn.es/assets/multimedia/imagenes/2024/11/25/17325339658637.jpg"
+              class="d-block w-100 img-fluid"
+              alt="Slide 3"
+            />
+            <div class="carousel-caption d-none d-md-block"></div>
+          </div>
+        </div>
+
+        <!-- botones del carrusel -->
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#miCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#miCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+      <!-- grilla principal del home -->
+      <h2 class="text-center my-4">Categorias principales</h2>
+      <!-- play5 -->
+      <div class="container my-5">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <div class="col">
+            <div class="card h-100 bg-transparent border-0">
+              <div class="card-body d-flex flex-column align-items-center">
+                <img
+                  src="https://wallpaperswide.com/download/playstation_5_pro-wallpaper-1920x1080.jpg"
+                  alt="Consola play station 5"
+                  class="img-fluid rounded mb-3"
+                />
+                <h5 class="card-title text-center">Juegos para Play 5</h5>
+                <a href="./pages/juepsPs5.html" class="btn btn-primary mt-3">Ver más</a>
+              </div>
+            </div>
+          </div>
+          <!-- play4 -->
+          <div class="col">
+            <div class="card h-100 bg-transparent border-0">
+              <div class="card-body d-flex flex-column align-items-center">
+                <img
+                  src="https://wallpapers.com/images/featured/4k-ps4-d6dizhububd0q15i.jpg"
+                  alt="Consola play station 4"
+                  class="img-fluid rounded mb-3"
+                />
+                <h5 class="card-title text-center">Juegos para Play 4</h5>
+                <a href="./pages/juegosPs4.html" class="btn btn-primary mt-3">Ver más</a>
+              </div>
+            </div>
+          </div>
+          <!-- Pc -->
+          <div class="col">
+            <div class="card h-100 bg-transparent border-0">
+              <div class="card-body d-flex flex-column align-items-center">
+                <img
+                  src="https://backiee.com/static/wallpapers/1920x1080/275819.jpg"
+                  alt="PC Gamer"
+                  class="img-fluid rounded mb-3"
+                />
+                <h5 class="card-title text-center">Juegos para Pc</h5>
+                <a href="./pages/JuegosPc.html" class="btn btn-primary mt-3">Ver más</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BANNER PUBLICITARIO -->
+      <section class="container-fluid d-none d-sm-block">
+        <a
+          href="https://promoslogitech.com/logitechg-play-days/participar/?home=yes"
+          target="_blank"
+        >
+          <img
+            src="https://fullh4rd.com.ar/logitech/assets/images/banner-desktop.jpg"
+            alt="fullh4rd banner"
+            class="img-fluid w-100"
+          />
+        </a>
+      </section>
+      <!-- seccion de productos destacados -->
+      <section class="container mt-5 mb-5">
+        <div class="mb-5">
+          <h2 class="text-center ">Productos destacados</h2>
+        <hr>
+        </div>
+        <div class="row row-gap-2 justify-content-center mb-5">
+          <div class="col-6 col-md-3 col-lg-3">
+            <a href="./pages/ps4DetalleMortalKombat.html" class="text-decoration-none">
+              <div class="card border-info mb-3 h-100 item-producto-destacado">
+                <img
+                  src="https://acdn-us.mitiendanube.com/stores/004/491/480/products/mortal_11_ps4-2-91f1be50c337c3e8e817177925366001-640-0-8e2ac03bda901a5e3417482075623772-1024-1024.webp"
+                  alt="mortal kombat II"
+                  class="img-fluid img-scale"
+                />
+                <div class="card-body">
+                  <h4 class="card-title">Mortal Kombat II</h4>
+                  <p class="card-text text-success">En descuento</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-md-3 col-lg-3">
+            <a href="./pages/pcDetalleResidentEvil2.html" class="text-decoration-none">
+              <div class="card border-info mb-3 h-100 item-producto-destacado">
+                <img
+                  src="https://lsgamesps.com/wp-content/uploads/2024/02/1618511595-resident-evil-2-ps5-1.jpg"
+                  alt="Resident Evil 2"
+                  class="img-fluid img-scale"
+                />
+                <div class="card-body">
+                  <h4 class="card-title">Resident Evil 2</h4>
+                  <p class="card-text text-success">En descuento</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-md-3 col-lg-3">
+            <a href="" class="text-decoration-none">
+              <div class="card border-info mb-3 h-100 item-producto-destacado">
+                <img
+                  src="https://acdn-us.mitiendanube.com/stores/004/491/480/products/cod-wwii-7ca3045bf3d005c83517096827623840-1024-1024-6226cd196121e81eb217235132352452-1024-1024.webp"
+                  alt="Call Of Duty WWII"
+                  class="img-fluid img-scale"
+                />
+                <div class="card-body">
+                  <h4 class="card-title">Call Of Duty WWII</h4>
+                  <p class="card-text text-success">En descuento</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-md-3 col-lg-3">
+            <a href="" class="text-decoration-none">
+              <div class="card border-info mb-3 h-100 item-producto-destacado">
+                <img
+                  src="https://acdn-us.mitiendanube.com/stores/004/491/480/products/diseno-sin-titulo-2023-08-10t114708-704-1-776c69f42fd6da9c1717144851271477-1024-1024.webp"
+                  alt="Minecraft"
+                  class="img-fluid img-scale"
+                />
+
+                <div class="card-body">
+                  <h4 class="card-title">Minecraft</h4>
+                  <p class="card-text text-success">En descuento</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- seccion de marcas/vendedores mejor rankeados  -->
+      <section class="container">
+        <div class="bg-dark p-1 mt-3 mb-4">
+          <h2 class="text-center">Marcas mejor rankeadas</h2>
+        </div>
+        <div class="row justify-content-center my-4">
+          <div class="col-4 col-md-3 col-lg-3 animacion-marcas">
+            <a
+              href="https://www.ea.com/es-es"
+              target="_blank"
+              class="d-flex justify-content-center"
+            >
+              <div class="logo-ea bg-white">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/6/6f/EA_Sports_monochrome_logo.svg"
+                  class="img-fluid logo-marca"
+                />
+              </div>
+            </a>
+          </div>
+          <div class="col-4 col-md-3 col-lg-3 animacion-marcas">
+            <a
+              href="https://www.playstation.com/es-ar/"
+              target="_blank"
+              class="text-decoration-none"
+            >
+              <i class="bi bi-playstation logo-marca logo-playstation"></i>
+            </a>
+          </div>
+          <div class="col-4 col-md-3 col-lg-3 animacion-marcas">
+            <a href="https://www.nintendo.com/es-ar/" target="_blank">
+              <img
+                src="https://1000marcas.net/wp-content/uploads/2019/12/logo-Nintendo.png"
+                class="img-fluid logo-marca"
+                alt=""
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- seccion de preguntas frecuentes -->
+      <section class="container my-5">
+        <div class="bg-dark p-1 mt-4 mb-2">
+          <h2 class="text-center">Preguntas frecuentes</h2>
+        </div>
+        <div class="accordion p-4" id="accordionFAQ">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="false"
+                aria-controls="collapseOne"
+              >
+                🎮 ¿Cómo recibo el videojuego después de comprarlo?
+              </button>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingOne"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body">
+                Una vez confirmado el pago, te enviamos el enlace de descarga o
+                el código de activación directamente a tu correo electrónico.
+                También podés acceder desde tu cuenta en nuestra web, en la
+                sección <strong>“Mis juegos”. </strong>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                💳 ¿Qué métodos de pago aceptan?
+              </button>
+            </h2>
+            <div
+              id="collapseTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingTwo"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body">
+                Aceptamos tarjetas de crédito y débito (Visa, Mastercard,
+                American Express), transferencias bancarias y pagos digitales
+                como Mercado Pago. ¡Rápido, seguro y sin complicaciones!
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseThree"
+                aria-expanded="false"
+                aria-controls="collapseThree"
+              >
+                💻 ¿Cómo sé si el juego es compatible con mi dispositivo?
+              </button>
+            </h2>
+            <div
+              id="collapseThree"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingThree"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body">
+                En cada ficha de producto encontrarás los requisitos mínimos y
+                recomendados. Si tenés dudas, podés escribirnos con las
+                características de tu equipo y te ayudamos a verificarlo.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseFour"
+                aria-expanded="false"
+                aria-controls="collapseFour"
+              >
+                💸 ¿Puedo pedir un reembolso si el juego no funciona o no me
+                gustó?
+              </button>
+            </h2>
+            <div
+              id="collapseFour"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingFour"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body">
+                Sí, aceptamos solicitudes de reembolso dentro de las 48 horas
+                posteriores a la compra, siempre que el juego no haya sido
+                activado o descargado. Queremos que estés satisfecho con tu
+                experiencia.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseFive"
+                aria-expanded="false"
+                aria-controls="collapseFive"
+              >
+                🔐 ¿Es seguro comprar en esta página?
+              </button>
+            </h2>
+            <div
+              id="collapseFive"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingFive"
+              data-bs-parent="#accordionFAQ"
+            >
+              <div class="accordion-body">
+                Totalmente. Usamos tecnología de encriptación y protocolos de
+                seguridad para proteger tus datos y transacciones. Tu
+                información está segura con nosotros.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- seccion de invitacion al newsletter -->
+
+      <section class="container">
+        <div
+          class="text-white bg-primary rounded p-4 my-5 animacion-newsletter d-block"
+        >
+          <h3 class="text-center my-2">¡Unite a nuestra comunidad gamer!</h3>
+          <p class="text-center my-3">
+            Recibí ofertas exclusivas, novedades y lanzamientos directamente en
+            tu correo.
+          </p>
+          <form >
+<div class="row justify-content-center">
+<div class="col-md-6 col-lg-5 mb-2 d-flex flex-column align-items-center ">
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                aria-describedby="emailHelp"
+                placeholder="Tu correo electrónico"
+                required
+              />
+              <small id="emailHelp" class="form-text text-muted"
+                >Podés darte de baja cuando quieras.</small
+              >
+            </div>
+            <div class="col-md-4 col-lg-3 mb-2 d-flex flex-column align-items-center ">
+              <button type="submit" class="btn btn-secondary w-100">
+                Suscribirme
+              </button>
+            </div>
+          </div>
+          </form>
+        
+        </div>
+      </section>
+      <a href="https://www.whatsapp.com/?lang=es_LA" target="_blank" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
+    </main>
+    <!-- Modal del Login -->
+    <div
+      class="modal fade"
+      id="modalLogin"
+      tabindex="-1"
+      aria-labelledby="modalLoginLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-dark text-white">
+            <h5 class="modal-title" id="modalLoginLabel">Iniciar Sesión</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="usuario" class="form-label">Usuario o Email</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="usuario"
+                  placeholder="Ej: correo@example.com"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Contraseña</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="********"
+                  required
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <a href="./pages/error404.html" class="btn btn-primary"
+              >Iniciar sesión</a
+            >
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Salir
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+    <footer class="bg-dark text-white pt-5 pb-4" data-bs-theme="dark">
+
+      <div class="container text-md-left">
+        <div class="row text-md-left text-center">
+          <!-- Logo -->
+          <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
+            <a class="gap-2 text-white" href="./index.html">
+        <p class="mb-0 d-inline-block me-2 fs-3 text-light-emphasis" >NextLevel</p>
+        <i class="bi bi-joystick fs-5 text-light-emphasis "></i>
+      </a>
+          </div>
+
+          <!--Social networks -->
+          <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
+            <h5 class="text-uppercase fw-bold mb-4">Redes</h5>
+            <a href="https://www.facebook.com/" class="text-white me-3"
+              ><i class="bi bi-facebook fs-4"></i
+            ></a>
+            <a href="https://x.com/" class="text-white me-3"
+              ><i class="bi bi-twitter-x fs-4"></i
+            ></a>
+            <a href="https://www.instagram.com/" class="text-white me-3"
+              ><i class="bi bi-instagram fs-4"></i
+            ></a>
+          </div>
+
+          <!-- category -->
+          <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
+            <h5 class="text-uppercase fw-bold mb-4">Categorías</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-white text-decoration-none">Inicio</a>
+              </li>
+              <li>
+                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalLogin">
+                  Iniciar Sesion</a>
+              </li>
+              <li>
+                <a class="nav-link" href="./pages/register.html">Crear cuenta</a>
+              </li>
+              <li>
+                <a class="nav-link" href="./pages/aboutUs.html">Sobre Nosotros</a>
+              </li>
+              <li>
+                <a class="nav-link" href="./pages/contact.html">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
